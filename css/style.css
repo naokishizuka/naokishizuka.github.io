@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* 文字コードの指定 */
+@import "https://fonts.googleapis.com/css?family=Abel";
+/* Google Fonts用のCSSを読み込み */
+@import "https://fonts.googleapis.com/css?family=Ubuntu";
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: .1em; }
+
+a {
+  color: black;
+  text-decoration: none; }
+  a:hover {
+    color: #a6a4a2; }
+
+.mail-btn {
+  padding: 10px;
+  border: 2px solid white;
+  -moz-border-radius: 5%;
+  -webkit-border-radius: 5%;
+  border-radius: 5%; }
+  .mail-btn i {
+    font-size: 20px;
+    font-size: 2rem;
+    color: white;
+    text-align: center; }
+    @media (min-width: 550px) {
+      .mail-btn i {
+        font-size: 30px;
+        font-size: 3rem; } }
+
+.header {
+  width: 100vw;
+  height: 56.25vw;
+  background-image: url(../images/profile_img.png);
+  background-size: contain;
+  position: relative; }
+  .header__mail-btn {
+    position: absolute;
+    left: 20px;
+    top: 20px; }
+
+.article {
+  padding: 40px; }
+  .article--bg_stripe {
+    background-image: linear-gradient(-45deg, #ffffff 40%, #a6a4a2 40%, #a6a4a2 50%, #ffffff 50%, #ffffff 90%, #a6a4a2 90%, #a6a4a2);
+    background-size: 16px 16px; }
+
+  .article__title {
+    font-weight: bold;
+    font-family: "Ubuntu";
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-size: 4rem; }
+
+  .article__list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    justify-content: space-between; }
+    .article__list li {
+      margin-top: 40px;
+      width: 100%; }
+      .article__list li:first-child {
+        margin-top: 0px; }
+    @media (min-width: 550px) {
+      .article__list {
+        -webkit-flex-direction: row;
+        flex-direction: row; }
+        .article__list li {
+          margin-top: 0;
+          width: 30%; } }
+    .article__list .article__list--sp-row {
+      -webkit-flex-direction: row;
+      flex-direction: row; }
+      .article__list .article__list--sp-row li {
+        width: 30%; }
+
+  .article__img {
+    padding-bottom: 100%;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center; }
+    @media (min-width: 550px) {
+      .article__img {
+        padding-bottom: 30%; }
+        .article__img:nth-child(n+4) {
+          margin-top: 20px; } }
+
+  .article__icon {
+    text-align: center; }
+    .article__icon i {
+      font-size: 80px;
+      font-size: 8rem; }
+
+.skill-item__title {
+  font-family: 'Ubuntu';
+  font-size: 22px;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.skill-item__icon {
+  margin-bottom: 20px;
+  text-align: center; }
+  .skill-item__icon i {
+    font-size: 50px;
+    font-size: 5rem; }
+
+.footer {
+  padding: 20px 40px; }
+
+.copyright {
+  text-align: center;
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=style.css.map */

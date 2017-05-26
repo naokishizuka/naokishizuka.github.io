@@ -1,0 +1,175 @@
+@charset "UTF-8";    /* 文字コードの指定 */
+
+@import "compass";
+@import 'https://fonts.googleapis.com/css?family=Abel';    /* Google Fonts用のCSSを読み込み */
+@import "https://fonts.googleapis.com/css?family=Ubuntu";
+
+@mixin fontsize($size: 24, $base: 10) {
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+}
+
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    letter-spacing: .1em;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+        color: #a6a4a2;
+    }
+}
+
+.mail-btn {
+    padding: 10px;
+    border: 2px solid white;
+    @include border-radius(5%);
+    i {
+        @include fontsize(20);
+        color: white;
+        text-align: center;
+        @media (min-width: 550px) {
+            @include fontsize(30);
+        }
+    }    
+}
+
+.header {
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(../images/profile_img.png);
+    background-size: contain;
+    position: relative;
+    @at-root {
+        #{&}__mail-btn {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+    }
+}
+
+.article {
+    padding: 40px;
+    @at-root {
+        #{&}--bg_stripe {
+          background-image: linear-gradient(
+            -45deg,
+            #fff 40%,
+            #a6a4a2 40%, #a6a4a2 50%,
+            #fff 50%, #fff 90%,
+            #a6a4a2 90%, #a6a4a2
+          );
+
+          background-size: 16px 16px;
+        }
+        #{&}__title {
+            font: {
+                weight: bold;
+                family: "Ubuntu";
+            }
+            text: {
+                transform: uppercase;
+                align: center;
+            }
+            margin-bottom: 40px;
+            @include fontsize(40);
+        }
+        #{&}__list {
+            @include display-flex;
+            @include flex-wrap(wrap);
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            li {
+                margin-top: 40px;
+                width: 100%;
+                &:first-child {
+                    margin-top: 0px;
+                }
+            }
+
+            @media (min-width: 550px) {
+                @include flex-direction(row);
+                li {
+                    margin-top: 0;
+                    width: 30%;
+                }
+            }
+
+            #{&}--sp-row {
+                @include flex-direction(row);
+                li {
+                    width: 30%;
+                }
+            }
+        }
+        
+        #{&}__img {
+            padding-bottom: 100%;
+            margin-top: 30px;
+            background: {
+                size: cover;
+                position: center;
+            }
+            
+            @media (min-width: 550px) {
+                padding-bottom: 30%;
+                &:nth-child(n+4) {
+                    margin-top: 20px;
+                }
+            }
+        }
+        #{&}__icon {
+            text-align: center;
+            i {
+                @include fontsize(80);
+            }
+        }
+    }
+}
+
+.skill-item {
+    @at-root {
+        #{&}__title {
+            font-family: 'Ubuntu';
+            @include fontsize(22);
+            margin-bottom: 20px;
+            text: {
+                align: center;
+                transform: uppercase;
+            }
+        }
+        #{&}__icon {
+            margin-bottom: 20px;
+            text-align: center;
+            i {
+                @include fontsize(50)
+            }
+        }
+        #{&}__description {
+            
+        }
+    }
+}
+
+.footer {
+    padding: 20px 40px;
+}
+
+.copyright {
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+}
